@@ -18,7 +18,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[landscape,a0paper,fontscale=0.22]{baposter} % Adjust the font scale/size here
+\documentclass[a0paper,fontscale=0.22]{baposter} % Adjust the font scale/size here
 
 \usepackage{graphicx} % Required for including images
 \graphicspath{{figures/}} % Directory in which figures are stored
@@ -80,115 +80,6 @@ linewidth=2pt % Width of the border lines around content boxes
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-\headerbox{Framework Overview}{name=introduction,column=1,row=0}{
-
-
-EvoloPy provides a set of classical and recent nature-inspired metaheuristic optimizers with an easy-to-use interface. 
-
-Main components of the framework are: 
-
-\begin{itemize}\compresslist
-\item The {\tt Optimizer}. 
-
-\item The metaheuristic {\tt Algorithms}: Particle Swarm Optimization
-  (PSO), Firefly Algorithm (FFA), Gray Wolf Optimizer (GWO),  Whale
-  Optimization Algorithm (WOA), Multi-Verse Optimizer (MVO), Moth
-  Flame Optimizer (MFO), Bat Algorithm (BAT), Cuckoo Search Algorithm
-  (CS).
-
-\item Benchmark functions and problem definitions.
-
-\item Result analysis.
-
-\vspace{1em}
-
-\end{itemize}}
-
-
-%----------------------------------------------------------------------------------------
-%	OBJECTIVES
-%----------------------------------------------------------------------------------------
-
-\headerbox{Highlights}{name=objectives,column=1,span=3,below=introduction}{
-
-
-\Large
-
-\begin{enumerate}\compresslist
-\item {\tt EvoloPy} is open source and cross-platform. 
-\item Makes easier using metaheuristic algorithms for their own problems.
-\item Or creating new ones.
-\item Free software {\tt https://github.com/7ossam81/EvoloPy}
-\end{enumerate}
-
-\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
-}
-
-%----------------------------------------------------------------------------------------
-%	RESULTS 1
-%----------------------------------------------------------------------------------------
-
-\headerbox{Comparison with Matlab}{name=results,column=2,span=2,row=0}{
-
-\LARGE
-NumPy rocks.
-%------------------------------------------------
-
-\begin{multicols}{2}
-\vspace{1em}
-
-\begin{center}
-\includegraphics[width=0.95\linewidth]{PSO}
-\captionof{figure}{PSO}
-\label{fig:pso}
-\end{center}
-
-
-\begin{center}
-\includegraphics[width=0.95\linewidth]{GWO}
-\captionof{figure}{GWO}
-\label{fig:gwo}
-\end{center}
-
-
-
-
-
-\end{multicols}
-}
-
-%----------------------------------------------------------------------------------------
-
-
-
-\headerbox{Design issues}{name=conclusion,column=2,span=2,row=0,below=results}{
-
-\begin{multicols}{2}
-
-\begin{itemize}\compresslist
-
-\item Using {\tt NumPy} extensively: simple and compact syntax for
-  vector operations.
-
-\item Populations as 2-dimensional arrays;  individuals as
-  1-dimensional arrays (\texttt{ndarray} from \texttt{Numpy}).
-
-\item  EvoloPy 11 classes: 8 for optimizers, 3 for optimization.
-
-\end{itemize}
-
-%------------------------------------------------
-
-%\begin{itemize}\compresslist
-%\item Pellentesque eget orci eros. Fusce ultricies, tellus et pellentesque fringilla, ante massa luctus libero, quis tristique purus urna nec nibh. Phasellus fermentum rutrum elementum. Nam quis justo lectus.
-%\item Vestibulum sem ante, hendrerit a gravida ac, blandit quis magna.
-%\item Donec sem metus, facilisis at condimentum eget, vehicula ut massa. Morbi consequat, diam sed convallis tincidunt, arcu nunc.
-%\item Nunc at convallis urna. isus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing.
-%\end{itemize}
-
-\end{multicols}
-}
-
 
 \headerbox{Why Python?}{name=method,column=0}{ % This block's bottom aligns with the bottom of the conclusion block
 
@@ -221,11 +112,87 @@ NumPy rocks.
 
 }
 
+\headerbox{Framework Overview}{name=introduction,column=1,row=0}{
+
+
+EvoloPy provides a set of classical and recent nature-inspired metaheuristic optimizers with an easy-to-use interface. 
+
+Main components of the framework are: 
+
+\begin{itemize}\compresslist
+\item The {\tt Optimizer}. 
+
+\item The metaheuristic {\tt Algorithms}:
+
+\item Benchmark functions and problem definitions.
+
+\item Result analysis.
+
+\vspace{1em}
+
+\end{itemize}}
+
+
+\headerbox{Design issues}{name=conclusion,column=2,span=2,row=0}{
+
+\begin{itemize}\compresslist
+
+\item Using {\tt NumPy} extensively: simple and compact syntax for
+  vector operations.
+
+\item Populations as 2-dimensional arrays;  individuals as
+  1-dimensional arrays (\texttt{ndarray} from \texttt{Numpy}).
+
+\item  EvoloPy 11 classes: 8 for optimizers, 3 for optimization.
+
+\end{itemize}
+
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	RESULTS 1
+%----------------------------------------------------------------------------------------
+
+\headerbox{Comparison with Matlab}{name=results,column=0,span=3,row=0,below=introduction}{
+
+\LARGE
+NumPy rocks.
+%------------------------------------------------
+
+\begin{multicols}{2}
+\vspace{1em}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth]{PSO}
+\captionof{figure}{PSO}
+\label{fig:pso}
+\end{center}
+
+
+\begin{center}
+\includegraphics[width=0.95\linewidth]{GWO}
+\captionof{figure}{GWO}
+\label{fig:gwo}
+\end{center}
+
+
+
+
+
+\end{multicols}
+}
+
+%----------------------------------------------------------------------------------------
+
+
+
 %----------------------------------------------------------------------------------------
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
-\headerbox{Contact}{name=references,column=0,below=method}{
+\headerbox{Contact}{name=references,column=0,below=results}{
 
 KASIT, The University of Jordan
 \{hossam.faris, i.aljarah\}@ju.edu.jo
@@ -235,16 +202,26 @@ ETSIIT-CITIC, University of Granada, Granada, Spain
 
 }
 
-%----------------------------------------------------------------------------------------
-%	RESULTS 2
-%----------------------------------------------------------------------------------------
-
-%\headerbox{Framework Overview}{name=results2,column=1,below=objectives,bottomaligned=references}{ % This block's bottom aligns with the bottom of the conclusion block
-%
-%
-%}
 
 %----------------------------------------------------------------------------------------
+%	CONCLUSIONS
+%----------------------------------------------------------------------------------------
+
+\headerbox{Highlights}{name=objectives,column=1,span=2,row=3,below=results}{
+\Large
+
+\begin{enumerate}\compresslist
+\item {\tt EvoloPy} is open source and cross-platform. 
+\item Makes easier using metaheuristic algorithms for their own
+  problems or creating new ones.
+\item Free software!
+\end{enumerate}
+
+\centerline
+{\tt github.com/7ossam81/EvoloPy}
+
+\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
 
 \end{poster}
 
