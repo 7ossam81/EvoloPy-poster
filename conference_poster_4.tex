@@ -18,7 +18,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[landscape,a0paper,fontscale=0.285]{baposter} % Adjust the font scale/size here
+\documentclass[landscape,a0paper,fontscale=0.22]{baposter} % Adjust the font scale/size here
 
 \usepackage{graphicx} % Required for including images
 \graphicspath{{figures/}} % Directory in which figures are stored
@@ -73,7 +73,7 @@ linewidth=2pt % Width of the border lines around content boxes
 %
 {\includegraphics[height=6em]{julogo}} % First university/lab logo on the left
 {\bf\textsc{EvoloPy: An Open-Source Nature-Inspired Optimization Framework in Python}\vspace{0.5em}} % Poster title
-{\textsc{\{ H. Faris, I. Aljarah S. Mirjalili, P. A. Castillo and JJ. Merelo \} \hspace{12pt}  University of Granada, Granada}} % Author names and institution
+{\textsc{\{ H. Faris, I. Aljarah S. Mirjalili, P. A. Castillo and JJ Merelo \} \hspace{12pt}  U. of Granada}} % Author names and institution
 {\includegraphics[height=6em]{granadalogo}} % Second university/lab logo on the right
 
 %----------------------------------------------------------------------------------------
@@ -82,23 +82,14 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \headerbox{Highlights}{name=objectives,column=0,row=0}{
 
-    
+
+\Large
 
 \begin{enumerate}\compresslist
-\item EvoloPy is an open source and cross-platform Python
-  framework that implements a wide range of classical and recent
-  nature-inspired metaheuristic algorithms. 
-\item The goal of EvoloPy is to facilitate the use of metaheuristic algorithms by
-  non-specialists coming from different domains.
-\item With a simple
-  interface and minimal dependencies, it is easier for researchers and
-  practitioners to utilize EvoloPy for optimizing and benchmarking
-  their own defined problems using the most powerful metaheuristic
-  optimizers in the literature.
-\item This framework facilitates designing
-  new algorithms or improving, hybridizing and analyzing the current
-  ones.
-\item The source code is publicly available at GitHub (https://github.com/7ossam81/EvoloPy)
+\item {\tt EvoloPy} is open source and cross-platform. 
+\item Makes easier using metaheuristic algorithms for their own problems.
+\item Or creating new ones.
+\item Free software \url{https://github.com/7ossam81/EvoloPy}
 \end{enumerate}
 
 \vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
@@ -155,35 +146,8 @@ Main components of the framework are:
 
 \headerbox{Comparison with Matlab}{name=results,column=2,span=2,row=0,bottomaligned=introduction}{
 
-\begin{multicols}{2}
-\vspace{1em}
-
-We compare the running time of metaheuristics implemented in EvoloPy with their peers in Matlab. The idea is to measure the running time of the main loop of each algorithm in EvoloPy and Matlab with an equal number of function evaluations.
-
- The experiments were performed on a machine with an Intel(R) Core(TM) i5-2400 CPU at 3.10Ghz and a memory of 4 GB on Windows 7 professional 32bit. The population size and the number of iterations were set to 50, and 100, respectively. 
- 
- We study the effect of the size of the problem on the running time. All optimizer were executed using different dimension lengths starting from 50 elements to 20,000 in both implementations, Matlab and EvoloPy. All optimizers were applied to minimize the unimodal sphere function.
- 
- Results of EvoloPy and Matlab for PSO and GWO are shownin Figures \ref{fig:pso} and
-\ref{fig:gwo}. With small dimensions there is no significant difference in the running time. In most of the optimizers and up to a dimension size of 500  the running time was less than 250s. For higher sizes, the difference in the running time remarkably increases. On a dimension length of 20,000 the ratio is
-around 1:2 for most of the optimizers. 
-
-The efficient running time of EvoloPy compared to Matlab
-for solving problems with large number of
-variables can be explained due to the use of the powerful
-N-dimensional array object \texttt{NumPY} to represent individuals and
-populations. 
-
-
-
-
-
-
-
-
-
-\end{multicols}
-
+\LARGE
+NumPy rocks.
 %------------------------------------------------
 
 \begin{multicols}{2}
