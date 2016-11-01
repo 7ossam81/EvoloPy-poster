@@ -30,6 +30,7 @@
 \usepackage{enumitem} % Used to reduce itemize/enumerate spacing
 \usepackage{palatino} % Use the Palatino font
 \usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+%\usepackage{hyperref}
 
 \usepackage{multicol} % Required for multiple columns
 \setlength{\columnsep}{1.5em} % Slightly increase the space between columns
@@ -80,7 +81,7 @@ linewidth=2pt % Width of the border lines around content boxes
 %	OBJECTIVES
 %----------------------------------------------------------------------------------------
 
-\headerbox{Highlights}{name=objectives,column=0,row=0}{
+\headerbox{Highlights}{name=objectives,column=2,row=1}{
 
 
 \Large
@@ -89,7 +90,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \item {\tt EvoloPy} is open source and cross-platform. 
 \item Makes easier using metaheuristic algorithms for their own problems.
 \item Or creating new ones.
-\item Free software \url{https://github.com/7ossam81/EvoloPy}
+\item Free software {\tt https://github.com/7ossam81/EvoloPy}
 \end{enumerate}
 
 \vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
@@ -107,34 +108,22 @@ linewidth=2pt % Width of the border lines around content boxes
 }{
 
 
-
-
 EvoloPy provides a set of classical and recent nature-inspired metaheuristic optimizers with an easy-to-use interface. 
 
 Main components of the framework are: 
 
 \begin{itemize}\compresslist
-\item The Optimizer: the main interface of the framework where users can select a list of optimizers to run in their experiment. The user can configure common parameters like population size and maximum iterations. 
+\item The {\tt Optimizer}. 
 
+\item The metaheuristic {\tt Algorithms}: Particle Swarm Optimization
+  (PSO), Firefly Algorithm (FFA), Gray Wolf Optimizer (GWO),  Whale
+  Optimization Algorithm (WOA), Multi-Verse Optimizer (MVO), Moth
+  Flame Optimizer (MFO), Bat Algorithm (BAT), Cuckoo Search Algorithm
+  (CS).
 
-\item The metaheuristic algorithms: this part includes the list of implemented optimizers. So far, the following eight algorithms have been implemented: 
+\item Benchmark functions and problem definitions.
 
-\begin{itemize}\compresslist
-\item  Particle Swarm Optimization (PSO), 
-\item  Firefly Algorithm (FFA), 
-\item  Gray Wolf Optimizer (GWO)
-\item  Whale Optimization Algorithm (WOA)
-\item  Multi-Verse Optimizer (MVO)
-\item  Moth Flame Optimizer (MFO)
-\item  Bat Algorithm (BAT)
-\item Cuckoo Search Algorithm (CS) .
-\end{itemize}
-
-
-
-\item Benchmark functions and problem definitions: a set of benchmark problems commonly used for comparing metaheuristic algorithms. A user-defined cost function could be added to this list.
-
-\item Results management: this component is responsible for exporting the results.
+\item Result analysis.
 
 \end{itemize}}
 
@@ -144,7 +133,7 @@ Main components of the framework are:
 %	RESULTS 1
 %----------------------------------------------------------------------------------------
 
-\headerbox{Comparison with Matlab}{name=results,column=2,span=2,row=0,bottomaligned=introduction}{
+\headerbox{Comparison with Matlab}{name=results,column=2,span=2,row=0}{
 
 \LARGE
 NumPy rocks.
@@ -191,7 +180,7 @@ ETSIIT-CITIC, University of Granada, Granada, Spain
 
 
 
-\headerbox{Design issues}{name=conclusion,column=1,span=3,row=0,below=results}{
+\headerbox{Design issues}{name=conclusion,column=1,span=3,row=0,below=introduction}{
 
 \begin{multicols}{2}
 
@@ -238,7 +227,7 @@ Where \texttt{lb} and \texttt{ub} are the upper and lower bounds respectively.
 }
 
 
-\headerbox{Why Python?}{name=method,column=0,below=objectives}{ % This block's bottom aligns with the bottom of the conclusion block
+\headerbox{Why Python?}{name=method,column=0}{ % This block's bottom aligns with the bottom of the conclusion block
 
 \begin{itemize}\compresslist
 \item  Python is a general purpose scripting language which has a clear and simple syntax. 
