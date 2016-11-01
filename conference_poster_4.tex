@@ -62,7 +62,7 @@ headerFontColor=white, % Text color for the header text in the content boxes
 boxColorOne=white, % Background color of the content boxes
 textborder=roundedleft, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
 eyecatcher=true, % Set to false for ignoring the left logo in the title and move the title left
-headerheight=0.1\textheight, % Height of the header
+headerheight=0.2\textheight, % Height of the header
 headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
 headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of content boxes
 %textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
@@ -76,36 +76,11 @@ linewidth=2pt % Width of the border lines around content boxes
 {\bf\textsc{EvoloPy: An Open-Source Nature-Inspired Optimization Framework in Python}\vspace{0.5em}} % Poster title
 {\textsc{\{ H. Faris, I. Aljarah S. Mirjalili, P. A. Castillo and JJ Merelo \} \hspace{12pt}  U. of Granada}} % Author names and institution
 {\includegraphics[height=6em]{granadalogo}} % Second university/lab logo on the right
-
-%----------------------------------------------------------------------------------------
-%	OBJECTIVES
-%----------------------------------------------------------------------------------------
-
-\headerbox{Highlights}{name=objectives,column=2,row=1}{
-
-
-\Large
-
-\begin{enumerate}\compresslist
-\item {\tt EvoloPy} is open source and cross-platform. 
-\item Makes easier using metaheuristic algorithms for their own problems.
-\item Or creating new ones.
-\item Free software {\tt https://github.com/7ossam81/EvoloPy}
-\end{enumerate}
-
-\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
-}
-
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-
-
-
-
-\headerbox{Framework Overview}{name=introduction,column=1,row=0
-}{
+\headerbox{Framework Overview}{name=introduction,column=1,row=0}{
 
 
 EvoloPy provides a set of classical and recent nature-inspired metaheuristic optimizers with an easy-to-use interface. 
@@ -125,9 +100,29 @@ Main components of the framework are:
 
 \item Result analysis.
 
+\vspace{1em}
+
 \end{itemize}}
 
 
+%----------------------------------------------------------------------------------------
+%	OBJECTIVES
+%----------------------------------------------------------------------------------------
+
+\headerbox{Highlights}{name=objectives,column=1,span=3,below=introduction}{
+
+
+\Large
+
+\begin{enumerate}\compresslist
+\item {\tt EvoloPy} is open source and cross-platform. 
+\item Makes easier using metaheuristic algorithms for their own problems.
+\item Or creating new ones.
+\item Free software {\tt https://github.com/7ossam81/EvoloPy}
+\end{enumerate}
+
+\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
 
 %----------------------------------------------------------------------------------------
 %	RESULTS 1
@@ -163,54 +158,22 @@ NumPy rocks.
 }
 
 %----------------------------------------------------------------------------------------
-%	REFERENCES
-%----------------------------------------------------------------------------------------
-
-\headerbox{Contact}{name=references,column=0,above=bottom}{
-
-KASIT, The University of Jordan
-\{hossam.faris, i.aljarah\}@ju.edu.jo
-
-ETSIIT-CITIC, University of Granada, Granada, Spain
-\{pedro, jmerelo\}@geneura.urg.es
-
-}
-
-%----------------------------------------------------------------------------------------
 
 
 
-\headerbox{Design issues}{name=conclusion,column=1,span=3,row=0,below=introduction}{
+\headerbox{Design issues}{name=conclusion,column=2,span=2,row=0,below=results}{
 
 \begin{multicols}{2}
 
 \begin{itemize}\compresslist
 
-\item Populations are implemented as 2-dimensional arrays while individuals are implemented as 1-dimensional arrays. In EvoloPy, \texttt{Numpy} is chosen to define the populations and individuals in the optimizers. \texttt{Numpy} is an open-source extension to Python that provides common scientific computing and mathematical routines as pre-compiled and fast functions. \texttt{Numpy} has many things in common with Matlab. This makes it easier for researchers who are familiar with Matlab to use EvoloPy. 
+\item Using {\tt NumPy} extensively: simple and compact syntax for
+  vector operations.
 
-\item  The core data structure \texttt{ndarray} from \texttt{Numpy} is used to define individuals and populations. For example, to define a randomly generated initial population with 50 individuals and 100 dimensions the following python line of code can be used
+\item Populations as 2-dimensional arrays;  individuals as
+  1-dimensional arrays (\texttt{ndarray} from \texttt{Numpy}).
 
-\texttt{initialPop = np.random.rand(50,100)}
-
-
-\item With \texttt{Numpy} it is possible to perform vector operations in simple and compact syntax. For example, one of the common operations used in many metaheuristic algorithms is to check the boundaries of the elements of the individuals after updating them. This can be performed all at once with \texttt{Numpy} as follows:
-
-\texttt{newPop=numpy.clip(oldPop, lb, ub)}
-
-Where \texttt{lb} and \texttt{ub} are the upper and lower bounds respectively.
-
-
-
-
-%\begin{figure*}
-%\centerline{\includegraphics[scale=0.35]{classD}}
-%\caption{Class diagram of the EvoloPy framework}
-%\label{fig:framework}
-%\end{figure*}
-
-%To demonstrate the main components of EvoloPy framework we use the UML representation. A class diagram illustrating the EvoloPy components and their relationships is presented in Figure \ref{fig:framework}. 
-
-\item  EvoloPy framework consists of eleven classes, three of them for coordinating and simplifying the optimization process, namely; optimizer, benchmarks, and solution. The other eight classes represent the optimizers.  
+\item  EvoloPy 11 classes: 8 for optimizers, 3 for optimization.
 
 \end{itemize}
 
@@ -255,6 +218,20 @@ Where \texttt{lb} and \texttt{ub} are the upper and lower bounds respectively.
 %\item Eu facilisis est tempus quis
 %\end{itemize}
 
+
+}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\headerbox{Contact}{name=references,column=0,below=method}{
+
+KASIT, The University of Jordan
+\{hossam.faris, i.aljarah\}@ju.edu.jo
+
+ETSIIT-CITIC, University of Granada, Granada, Spain
+\{pedro, jmerelo\}@geneura.urg.es
 
 }
 
